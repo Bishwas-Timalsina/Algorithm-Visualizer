@@ -5,16 +5,18 @@
 :root {
   --primary-color: #0e0e0e;
   --secondary-color: #ffffff;
-  --accent-color: #f78746;
+  /* --accent-color: #013877; */
+  --accent-color: rgb(211, 61, 61);
   --bg-color: #ffffff;
   --text-color: #111827;
 }
 
 .dark {
   --primary-color: #f3f4f6;
-  --secondary-color: #2f2f30;
-  --accent-color: #fb923c;
-  --bg-color: #000000;
+  --secondary-color: #161616;
+  /* --accent-color: #2a64bb; */
+  --accent-color: rgb(211, 61, 61);
+  --bg-color: #2f2f30;
   --text-color: #f3f4f6;
 }
 @layer base {

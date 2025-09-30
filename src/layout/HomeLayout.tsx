@@ -6,12 +6,12 @@ import Navbar from "../components/NavBar/Navbar";
 const HomeLayout = () => {
   return (
     <div className="grid grid-cols-[16rem_1fr] h-screen overflow-hidden">
-      <aside className="bg-[var(--secondary-color)] h-full py-8">
+      <aside className="bg-[var(--secondary-color)] h-full py-6">
         <Sidebar />
       </aside>
 
       <main className="bg-[var(--bg-color)] flex flex-col overflow-hidden">
-        <header className="w-full sticky top-0 bg-[var(--primary-color)]/10 backdrop-blur-md border-b border-[var(--primary-color)]/20 flex items-center z-10 p-8 px-4">
+        <header className="w-full sticky top-0 bg-[var(--primary-color)]/10 backdrop-blur-md border-b border-[var(--primary-color)]/20 flex items-center z-10 p-6">
           <Navbar />
         </header>
 

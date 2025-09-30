@@ -37,8 +37,8 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="grid grid-cols-12 justify-between w-full">
-        <div className="flex items-center text-gray-400 space-x-2 col-span-11">
+      <div className="my-[10px] grid grid-cols-12 justify-between w-full">
+        <div className="flex items-center text-[var(--text-color)] space-x-2 col-span-11">
           <LayoutGrid className="w-4 h-4" />
           <span className="text-sm">|</span>
 
@@ -51,7 +51,7 @@ const Navbar = () => {
               <div key={i} className="flex items-center space-x-1">
                 <ChevronRight className="w-4 h-4" />
                 {i === paths.length - 1 ? (
-                  <span className="text-sm text-white font-medium">
+                  <span className="text-sm text-[var(--text-color)] font-medium">
                     {segment.name}
                   </span>
                 ) : (
@@ -69,12 +69,12 @@ const Navbar = () => {
         <div className="col-span-1 flex justify-end">
           <button
             onClick={toggleDark}
-            className="p-2 rounded-full bg-[var(--secondary-color)] hover:bg-[var(--primary-color)] transition"
+            className="p-2 rounded-full bg-[var(--accent-color)] hover:bg-[#c21818] transition"
           >
             {dark ? (
-              <Sun className="w-4 h-4 text-yellow-400" />
+              <Sun className="w-4 h-4 text-white" />
             ) : (
-              <Moon className="w-4 h-4 text-gray-300" />
+              <Moon className="w-4 h-4 text-white" />
             )}
           </button>
         </div>
