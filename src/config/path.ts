@@ -1,4 +1,5 @@
 export const HOME = "home";
 export const STACK = "stack";
 export const QUEUE = "queue";
-export const LIST = "list";
+export const LINKED_LIST = "linked-list";
+export const VISUALIZER = "visualizer";

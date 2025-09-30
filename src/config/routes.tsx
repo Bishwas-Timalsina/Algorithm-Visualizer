@@ -1,14 +1,19 @@
 import { Navigate, type RouteObject } from "react-router-dom";
-import { HOME, LIST, QUEUE, STACK } from "./path";
+import { HOME, LINKED_LIST, QUEUE, STACK, VISUALIZER } from "./path";
 import StackPage from "../pages/Stack/StackPage";
 import HomeLayout from "../layout/HomeLayout";
 import ListPage from "../pages/List/ListPage";
 import QueuePage from "../pages/Queue/QueuePage";
+import HomePage from "../pages/Home/HomePage";
 
 const PublicRoute: RouteObject = {
-  path: HOME,
+  path: VISUALIZER,
   element: <HomeLayout />,
   children: [
+    {
+      path: HOME,
+      element: <HomePage />,
+    },
     {
       path: STACK,
       element: <StackPage />,
@@ -18,7 +23,7 @@ const PublicRoute: RouteObject = {
       element: <QueuePage />,
     },
     {
-      path: LIST,
+      path: LINKED_LIST,
       element: <ListPage />,
     },
   ],
@@ -27,7 +32,7 @@ const PublicRoute: RouteObject = {
 const routes: RouteObject[] = [
   {
     path: "/",
-    element: <Navigate to={`${HOME}/${STACK}`} />,
+    element: <Navigate to={`${VISUALIZER}/${HOME}`} />,
   },
   PublicRoute,
 ];
