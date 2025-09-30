@@ -7,7 +7,7 @@ import { VISUALIZER } from "../../config/path";
 const Sidebar = () => {
   return (
     <>
-      <aside className="w-64 h-screen text-gray-200 flex flex-col sticky top-0">
+      <aside className="w-64 h-screen flex flex-col sticky top-0 bg-[var(--secondary-color)] text-[var(--text-color)]">
         <div className="px-6 py-4 border-b border-neutral-800">
           <h1 className="text-lg font-semibold  w-fit ">
             <span className="text-white px-2 py-3 bg-black rounded-l-2xl ">

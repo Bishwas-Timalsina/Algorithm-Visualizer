@@ -3,9 +3,19 @@
 @import "tailwindcss";
 
 :root {
-  --primary-color: #fff;
-  --secondary-color: #000000;
+  --primary-color: #0e0e0e;
+  --secondary-color: #ffffff;
   --accent-color: #f78746;
+  --bg-color: #ffffff;
+  --text-color: #111827;
+}
+
+.dark {
+  --primary-color: #f3f4f6;
+  --secondary-color: #2f2f30;
+  --accent-color: #fb923c;
+  --bg-color: #000000;
+  --text-color: #f3f4f6;
 }
 @layer base {
   * {
@@ -16,10 +26,9 @@
   }
 }
 body {
-  background-color: var(--secondary-color);
   font-style: normal;
   font-family: "Poppins", sans-serif;
-  color: var(--primary-color);
+  transition: background-color 3s, color 2s;
 }
 /* .bgImage {
   background-image: url("../src/assets/music.png");

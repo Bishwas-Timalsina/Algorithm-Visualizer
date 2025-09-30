@@ -1,6 +1,5 @@
 import {
   Home,
-  Layers,
   List,
   ListCheck,
   Server,
