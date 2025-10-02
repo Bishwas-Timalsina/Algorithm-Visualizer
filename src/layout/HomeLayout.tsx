@@ -16,10 +16,6 @@ const HomeLayout = () => {
         </header>
 
         <section className="flex-1 overflow-y-auto px-6 py-4 text-[var(--text-color)]">
-          {Array.from({ length: 50 }).map((_, i) => (
-            <p key={i}>Lorem ipsum dolor sit amet..asdasaaaaaaaaaaaaaaaaa.</p>
-          ))}
-
           <Outlet />
         </section>
       </main>
