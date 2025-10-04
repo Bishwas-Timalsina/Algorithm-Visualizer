@@ -1,5 +1,5 @@
-import { ChevronRight, LayoutGrid, Moon, Sun } from "lucide-react";
-import { useEffect, useState } from "react";
+import { ChevronRight, LayoutGrid } from "lucide-react";
+// import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
