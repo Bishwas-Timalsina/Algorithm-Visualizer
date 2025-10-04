@@ -1,9 +1,20 @@
-import React from 'react'
+import type { ITextProps } from "../../interfaces/Interface";
 
-const Text = () => {
+const Text = (props: ITextProps) => {
+  const { size, weight, content, lineHeight = "24px", className } = props;
   return (
-    <div>Text</div>
-  )
-}
-
-export default Text
+    <>
+      <div
+        style={{
+          fontSize: size,
+          fontWeight: weight,
+          lineHeight: lineHeight,
+        }}
+        className={`${className}`}
+      >
+        {content}
+      </div>
+    </>
+  );
+};
+export default Text;
