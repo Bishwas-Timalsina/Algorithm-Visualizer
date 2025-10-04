@@ -21,3 +21,14 @@ export interface IButtonProps {
   style?: any;
   className: string;
 }
+export interface IStackControlProps {
+  onPush: () => void;
+  onPop: () => void;
+  onReset: () => void;
+  inputValue: string;
+  setInputValue?: any;
+}
+
+export interface IStackViewProps {
+  stack: any;
+}
