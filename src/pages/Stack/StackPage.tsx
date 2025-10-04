@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import HeaderText from "./Components/HeaderText";
 import StackControl from "./Components/StackControl";
 import StackViewer from "./Components/StackViewer";
@@ -17,7 +17,7 @@ const StackPage = () => {
   };
   const handlePop = () => {
     if (stack.length === 0) return;
-    const popped = stack[stack.length - 1];
+    // const popped = stack[stack.length - 1];
     setStack((prev: any) => prev.slice(0, -1));
   };
 
