@@ -15,3 +15,9 @@ export interface ITextProps {
   lineHeight?: string;
   className?: string;
 }
+export interface IButtonProps {
+  onClick?: () => void;
+  label?: string;
+  style?: any;
+  className: string;
+}
