@@ -28,7 +28,17 @@ export interface IStackControlProps {
   inputValue: string;
   setInputValue?: any;
 }
+export interface IQueueControlProps {
+  onEnQueue: () => void;
+  onDeQueue: () => void;
+  onReset: () => void;
+  inputValue: string;
+  setInputValue?: any;
+}
 
 export interface IStackViewProps {
   stack: any;
+}
+export interface IQueueViewProps {
+  queue: any;
 }
