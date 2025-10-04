@@ -14,7 +14,7 @@ const Sidebar = () => {
               ⚙ DSA
             </span>
             <span className="text-black px-2 py-3 bg-white font-bold rounded-r-2xl">
-              Visualizer
+              Vizard
             </span>
           </h1>
         </div>
