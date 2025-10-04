@@ -1,10 +1,10 @@
-import { ChevronRight, LayoutGrid } from "lucide-react";
-// import { useEffect, useState } from "react";
+import { ChevronRight, LayoutGrid, Moon, Sun } from "lucide-react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const location = useLocation();
-  // const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
 
   const segments = location.pathname.split("/").filter(Boolean);
 
@@ -13,27 +13,27 @@ const Navbar = () => {
     path: "/" + segments.slice(0, index + 1).join("/"),
   }));
 
-  // const toggleDark = () => setDark((prev) => !prev);
+  const toggleDark = () => setDark((prev) => !prev);
 
-  // useEffect(() => {
-  //   const stored = localStorage.getItem("theme");
-  //   if (stored === "dark") setDark(true);
-  // }, []);
+  useEffect(() => {
+    const stored = localStorage.getItem("theme");
+    if (stored === "dark") setDark(true);
+  }, []);
 
-  // useEffect(() => {
-  //   document.documentElement.classList.toggle("dark", dark);
-  //   localStorage.setItem("theme", dark ? "dark" : "light");
-  // }, [dark]);
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", dark);
+    localStorage.setItem("theme", dark ? "dark" : "light");
+  }, [dark]);
 
-  // useEffect(() => {
-  //   const root = document.documentElement;
+  useEffect(() => {
+    const root = document.documentElement;
 
-  //   if (dark) {
-  //     root.classList.add("dark");
-  //   } else {
-  //     root.classList.remove("dark");
-  //   }
-  // }, [dark]);
+    if (dark) {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+  }, [dark]);
 
   return (
     <>
@@ -66,7 +66,7 @@ const Navbar = () => {
             ))}
           </nav>
         </div>
-        {/* <div className="col-span-1 flex justify-end">
+        <div className="col-span-1 flex justify-end">
           <button
             onClick={toggleDark}
             className="p-2 rounded-full bg-[var(--accent-color)] hover:bg-[#c21818] transition"
@@ -77,7 +77,7 @@ const Navbar = () => {
               <Moon className="w-4 h-4 text-white" />
             )}
           </button>
-        </div> */}
+        </div>
       </div>
     </>
   );
