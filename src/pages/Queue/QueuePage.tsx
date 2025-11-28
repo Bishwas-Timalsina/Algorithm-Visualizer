@@ -1,7 +1,8 @@
 import { useState } from "react";
-import HeaderText from "./Components/HeaderText";
 import QueueControl from "./Components/QueueControl";
 import QueueViewer from "./Components/QueueViewer";
+import HeaderText from "../../components/Atomic/HeaderText";
+import { DSA } from "../../constants/Content";
 
 const QueuePage = () => {
   const [queue, setQueue] = useState<number[]>([]);
@@ -25,7 +26,7 @@ const QueuePage = () => {
   return (
     <>
       <div className="flex flex-col justify-start align-center gap-4 py-4">
-        <HeaderText />
+        <HeaderText content={DSA.Queue} title="Queue" />
         <div className="flex flex-row justify-between align-center gap-4">
           <QueueControl
             onEnQueue={handleEnqueue}

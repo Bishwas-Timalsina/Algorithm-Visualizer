@@ -1,10 +1,19 @@
 import { Navigate, type RouteObject } from "react-router-dom";
-import { HOME, LINKED_LIST, QUEUE, STACK, VISUALIZER } from "./path";
+import {
+  CIRCULAR_QUEUE,
+  HOME,
+  LINKED_LIST,
+  LIST,
+  QUEUE,
+  STACK,
+  VISUALIZER,
+} from "./path";
 import StackPage from "../pages/Stack/StackPage";
 import HomeLayout from "../layout/HomeLayout";
 import ListPage from "../pages/List/ListPage";
 import QueuePage from "../pages/Queue/QueuePage";
 import HomePage from "../pages/Home/HomePage";
+import CircularQueuePage from "../pages/CircularQueue/CircularQueuePage";
 
 const PublicRoute: RouteObject = {
   path: VISUALIZER,
@@ -20,6 +29,14 @@ const PublicRoute: RouteObject = {
     },
     {
       path: QUEUE,
+      element: <QueuePage />,
+    },
+    {
+      path: CIRCULAR_QUEUE,
+      element: <CircularQueuePage />,
+    },
+    {
+      path: LIST,
       element: <QueuePage />,
     },
     {
