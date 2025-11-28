@@ -1,4 +1,3 @@
- 
 import Text from "../../../components/Atomic/Text";
 import Button from "../../../components/Atomic/Button";
 import type { IStackControlProps } from "../../../interfaces/Interface";
@@ -16,22 +15,22 @@ const StackControl = (props: IStackControlProps) => {
             placeholder="Enter Value"
             value={inputValue}
             onChange={(e) => setInputValue(e?.target?.value)}
-            className="border-[var(--accent-color)]/70 border-[1px] rounded px-1 py-2 col-span-10"
+            className="border-[var(--accent-color)]/70 border-[1px] rounded px-2 py-2 col-span-10"
           />
           <Button
             onClick={onPush}
             label={"Push"}
-            className="bg-[var(--accent-color)] rounded-md px-2 py-2 col-span-2 h-[10]"
+            className="bg-[var(--accent-color)] rounded-md px-3 py-2 col-span-2"
           />
           <Button
             onClick={onPop}
             label={"Pop"}
-            className="bg-[var(--secondary-color)]/20 rounded-md px-2 py-2 col-span-6 h-[10]"
+            className="bg-[var(--secondary-color)]/20 rounded-md px-3 py-2 col-span-6"
           />
           <Button
             onClick={onReset}
             label={"Reset"}
-            className="bg-[var(--primary-color)]/40 rounded-md px-2 py-2 col-span-6 h-[10]"
+            className="bg-[var(--primary-color)]/40 rounded-md px-3 py-2 col-span-6"
           />
         </div>
       </div>
