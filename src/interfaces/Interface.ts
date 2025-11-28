@@ -35,6 +35,8 @@ export interface IQueueControlProps {
   onReset: () => void;
   inputValue: string;
   setInputValue?: any;
+  isFull?: boolean;
+  isEmpty?: boolean;
 }
 
 export interface IStackViewProps {
@@ -42,6 +44,7 @@ export interface IStackViewProps {
 }
 export interface IQueueViewProps {
   queue: any;
+  maxSize?: number;
 }
 export interface IHeaderType {
   content: any;
