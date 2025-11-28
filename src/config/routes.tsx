@@ -37,7 +37,7 @@ const PublicRoute: RouteObject = {
     },
     {
       path: LIST,
-      element: <QueuePage />,
+      element: <ListPage />,
     },
     {
       path: LINKED_LIST,
