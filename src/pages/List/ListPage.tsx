@@ -11,11 +11,16 @@ const ListPage = () => {
   const handleInsert = () => {
     if (inputValue.trim() === "") return;
     const value = Number(inputValue);
-    setList((prev) => [...prev, value]);
+    setList((prev) => [...prev, value]); // Insert at rear only
     setInputValue("");
   };
 
-  const handleDelete = () => {
+  const handleDeleteFront = () => {
+    if (list.length === 0) return;
+    setList((prev) => prev.slice(1));
+  };
+
+  const handleDeleteRear = () => {
     if (list.length === 0) return;
     setList((prev) => prev.slice(0, -1));
   };
@@ -32,7 +37,8 @@ const ListPage = () => {
         <div className="flex flex-row justify-between align-center gap-4">
           <ListControl
             onInsert={handleInsert}
-            onDelete={handleDelete}
+            onDeleteFront={handleDeleteFront}
+            onDeleteRear={handleDeleteRear}
             onReset={handleReset}
             inputValue={inputValue}
             setInputValue={setInputValue}

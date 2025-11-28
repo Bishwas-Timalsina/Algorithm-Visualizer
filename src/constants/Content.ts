@@ -9,4 +9,7 @@ export const DSA = {
     "FIFO linear data structure where the end connects to the beginning, allowing efficient reuse of empty spaces using wrap-around",
 
   List: "Linear data structure that stores elements in an ordered, index-based sequence with no restrictions on insertion or deletion",
+
+  LinkedList:
+    "Linear data structure where elements (nodes) are connected using pointers, allowing dynamic insertion and deletion at any position",
 };

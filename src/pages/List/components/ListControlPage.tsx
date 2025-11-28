@@ -3,7 +3,8 @@ import Button from "../../../components/Atomic/Button";
 
 type ListControlProps = {
   onInsert: () => void;
-  onDelete: () => void;
+  onDeleteFront: () => void;
+  onDeleteRear: () => void;
   onReset: () => void;
   inputValue: string;
   setInputValue: (val: string) => void;
@@ -11,13 +12,14 @@ type ListControlProps = {
 
 const ListControl = ({
   onInsert,
-  onDelete,
+  onDeleteFront,
+  onDeleteRear,
   onReset,
   inputValue,
   setInputValue,
 }: ListControlProps) => {
   return (
-    <div className="border-[var(--accent-color)] border-2 rounded-md px-4 py-4 flex flex-col gap-4 justify-start items-start w-[40%] h-[200px]">
+    <div className="border-[var(--accent-color)] border-2 rounded-md px-4 py-4 flex flex-col gap-4 justify-start items-start w-[40%] h-[240px]">
       <Text content="List Controls" size="22px" weight="500" />
 
       <div className="grid grid-cols-12 gap-3 w-full">
@@ -31,20 +33,26 @@ const ListControl = ({
 
         <Button
           onClick={onInsert}
-          label={"Insert"}
+          label={"Insert (Rear)"}
           className="bg-[var(--accent-color)] rounded-md px-3 py-2 col-span-3"
         />
 
         <Button
-          onClick={onDelete}
-          label={"Delete"}
+          onClick={onDeleteFront}
+          label={"Delete Front"}
+          className="bg-[var(--secondary-color)]/30 rounded-md px-3 py-2 col-span-6"
+        />
+
+        <Button
+          onClick={onDeleteRear}
+          label={"Delete Rear"}
           className="bg-[var(--secondary-color)]/30 rounded-md px-3 py-2 col-span-6"
         />
 
         <Button
           onClick={onReset}
           label={"Reset"}
-          className="bg-[var(--primary-color)]/40 rounded-md px-3 py-2 col-span-6"
+          className="bg-[var(--primary-color)]/40 rounded-md px-3 py-2 col-span-12"
         />
       </div>
     </div>

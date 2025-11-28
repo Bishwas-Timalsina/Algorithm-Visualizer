@@ -14,6 +14,7 @@ import ListPage from "../pages/List/ListPage";
 import QueuePage from "../pages/Queue/QueuePage";
 import HomePage from "../pages/Home/HomePage";
 import CircularQueuePage from "../pages/CircularQueue/CircularQueuePage";
+import LinkedListPage from "../pages/LinkedList/LinkedListPage";
 
 const PublicRoute: RouteObject = {
   path: VISUALIZER,
@@ -41,7 +42,7 @@ const PublicRoute: RouteObject = {
     },
     {
       path: LINKED_LIST,
-      element: <ListPage />,
+      element: <LinkedListPage />,
     },
   ],
 };
