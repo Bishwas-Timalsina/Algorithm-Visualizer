@@ -1,5 +1,7 @@
 import {
+  Donut,
   Home,
+  Link,
   List,
   ListCheck,
   Server,
@@ -30,9 +32,18 @@ export const NavSection = [
         icon: ListCheck,
       },
       {
-        label: "Linked List",
+        label: "Circular Queue",
+        icon: Donut,
+      },
+      {
+        label: "List",
         icon: List,
       },
+      {
+        label: "Linked List",
+        icon: Link,
+      },
+
       {
         label: "Binary Search Tree",
         icon: TreePine,

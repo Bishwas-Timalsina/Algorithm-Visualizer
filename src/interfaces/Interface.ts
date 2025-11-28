@@ -20,6 +20,7 @@ export interface IButtonProps {
   label?: string;
   style?: any;
   className: string;
+  disabled?: boolean;
 }
 export interface IStackControlProps {
   onPush: () => void;
@@ -41,4 +42,23 @@ export interface IStackViewProps {
 }
 export interface IQueueViewProps {
   queue: any;
+}
+export interface IHeaderType {
+  content: any;
+  title: string;
+}
+export interface ICircularQueueControlProps {
+  onEnQueue: () => void;
+  onDeQueue: () => void;
+  onReset: () => void;
+  inputValue: string;
+  setInputValue: (val: string) => void;
+  isFull: boolean;
+  isEmpty: boolean;
+}
+export interface ICircularQueueViewProps {
+  queue: (number | null)[];
+  front: number;
+  rear: number;
+  maxSize: number;
 }
